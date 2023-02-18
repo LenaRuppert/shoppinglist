@@ -1,26 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from "./component/Header";
+import {Item} from "./model/Item";
+import ItemList from "./component/ItemList";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [items, setItems] = useState<Item[]>([{name: "Paprika", id: "1"}])
+
+  return <div className="App">
+   <Header/>
+      <ItemList items={items}/>
+
+  </div>
+
 }
 
 export default App;
