@@ -1,0 +1,6 @@
+.additem {
+    background-color: darkseagreen;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+}
