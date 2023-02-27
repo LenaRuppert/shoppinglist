@@ -15,7 +15,7 @@ export default function AddItem(props: AddItemProps){
     }
 
     function onNameSave(){
-        props.onAddItem({name, id:"1"})
+        props.onAddItem({name, id: "1", isCompleted: false})
     }
 
     return(

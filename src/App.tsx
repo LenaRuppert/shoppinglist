@@ -9,11 +9,16 @@ import AddItem from "./component/AddItem";
 
 function App() {
 
-    const [items, setItems] = useState<Item[]>([{name: "Paprika", id: "1"}])
+    const [items, setItems] = useState<Item[]>([{name: "Paprika", id: "1", isCompleted: false}])
+
+
+
 
     function addItem(newItem: Item){
         setItems(prevState => [...prevState, newItem])
     }
+
+
 
   return <div className="App">
    <Header/>
