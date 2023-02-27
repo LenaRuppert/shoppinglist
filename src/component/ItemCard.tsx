@@ -12,7 +12,7 @@ export default function(props: ItemCardProps){
         <section className={"item-card"}>
             <p>{props.item.name}</p>
             <p>{props.item.isCompleted}</p>
-            <button>erledigt</button>
+            <button className={"button-delete"}>delete</button>
         </section>
     )
 }

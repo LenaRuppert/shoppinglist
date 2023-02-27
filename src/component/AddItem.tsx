@@ -20,8 +20,7 @@ export default function AddItem(props: AddItemProps){
 
     return(
         <div className={"additem"}>
-            <label>neues Produkt</label>
-            <input value={name} onChange={onNameChange}/>
+            <input placeholder={"neues Produkt"} value={name} onChange={onNameChange}/>
             <button onClick={onNameSave}>ok</button>
         </div>
     )
