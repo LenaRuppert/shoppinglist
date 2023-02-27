@@ -12,20 +12,17 @@ function App() {
     const [items, setItems] = useState<Item[]>([{name: "Paprika", id: "1", isCompleted: false}])
 
 
-
-
-    function addItem(newItem: Item){
+    function addItem(newItem: Item) {
         setItems(prevState => [...prevState, newItem])
     }
 
 
+    return <div className="App">
+        <Header/>
+        <ItemList items={items}/>
+        <AddItem onAddItem={addItem}/>
 
-  return <div className="App">
-   <Header/>
-      <ItemList items={items}/>
-      <AddItem onAddItem={addItem}/>
-
-  </div>
+    </div>
 
 }
 
